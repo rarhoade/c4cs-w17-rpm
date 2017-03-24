@@ -6,11 +6,8 @@ python:
 
 install: pip install python-coveralls
 
-before_script:
-  - make test
-
 script: 
-  - test_rpn.py
+  - python test_rpn.py
 
 after_success:
   - coveralls
