@@ -11,4 +11,4 @@ script:
   - nosetests --with-coverage
 
 after_success:
-  - coveralls
+  - COVERALLS_REPO_TOKEN=ZIAy4LQnCYNs8EuSrIby8vacBmcrZCl7i coveralls
