@@ -3,12 +3,11 @@ python:
   - "2.7"
 
 install: 
-  - pip install python-coveralls
-  - pip install coverage
+  - pip install coveralls
   - pip install nose
 
 script: 
   - nosetests --with-coverage
 
 after_success:
-  - COVERALLS_REPO_TOKEN=ZIAy4LQnCYNs8EuSrIby8vacBmcrZCl7i coveralls
+  -  coveralls
