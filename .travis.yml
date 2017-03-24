@@ -1,13 +1,15 @@
 language: python
 python:
-  - "2.6"
   - "2.7"
-  - "3.5"
 
-install: pip install python-coveralls
+install: 
+  - pip install python-coveralls
+  - pip install coverage
+  - pip install nose
 
 script: 
-  - python test_rpn.py
+  - python setup.py install
+  - nosetests --with-coverage
 
 after_success:
   - coveralls
